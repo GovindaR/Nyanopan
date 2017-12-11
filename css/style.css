@@ -1,34 +1,50 @@
-/*header start*/
-header .social{
-	float: right;
-	margin-top: 48px;
+@font-face {
+	font-family: NyanoFont;
+	src: url('../fonts/MyriadPro-Bold.otf');
 }
-
-header .social > a{
+body{
+	margin: 0;
+	background: url('../images/bg.jpg') 0 0 no-repeat;
+	background-size: 100%;
+}
+/*header start*/
+header .logose{
 	float: left;
+	margin: 20px  0 0 -12px;
+}
+header .center .vol{
 	text-decoration: none;
-	color: #fff !important;
+	color: #fff;
+	float: left;
+    margin: 53px 0 0 467px;
 	background-color: #f04a20;
 	font-size:11.87px; 
 	font-weight:bold;
-	font-family: Open San,serief;
 	padding: 13px 20px;
 	box-shadow:inset 0 0 10px #000000;
 	text-transform: uppercase;
 }
-
-header ul{
-	float: left;
-	margin-left: 35px;
+.logos{
+	margin-top: 48px;
 }
-header li{
+.logos ul.social{
+	float: right;
+	margin: 10px 0 0 0;
+}
+.logos .social li{
 	float: left;
 	margin-left: 10px;
 	cursor: pointer;
-} 
+}
+.fa-angle-right:before {
+    display: none;
+}
+.fa-angle-left:before{
+	display: none;
+}
 header .social a{
 	float: left;
-	color: #000;
+	color: #fff;
   	text-decoration: none;
 }
 .fa-facebook-official:hover,.fa-facebook-official:focus{
@@ -47,28 +63,22 @@ color:#fb3958
 	color: #007bb6;
 } 
 /*header end*/
-/*nav-bar start*/
-nav{
-	position: relative;
-}
-.menu{
+/*menu start*/
+ul.menu{
 	float: right;
-	margin-top: 9px;
 	background-color: #7cb429;
+	margin-top: 10px;
 }
-nav ul{
+ul.menu li{
 	float: left;
 }
-nav li{
-	float: left;
-}
-nav a{
+ul.menu a{
 	display: block;
 	color: #fff;
 	height: 50px;
 	line-height: 50px;
 	font-size: 15px;
-	padding: 0 15px;
+	padding: 0 14px;
 	font-weight: bold;
 	text-transform: uppercase;
 	text-decoration: none;
@@ -77,55 +87,77 @@ nav a{
 	-moz-transition: all .3s ease-in;
 	-o-transition: all .3s ease-in;
 }
-nav ul li a:hover,nav ul li a:focus{
+ul.menu a:last-child{
+	margin: 0;
+}
+.menu li a:hover,.menu li a:focus{
 	color: #f04a20;
 	text-decoration: underline;
 }
-nav img{
-	position: absolute;
-	top: -76px;
-    left: 247px;
+header >.center >input{
+	float: right;
+	background:url(../images/search.png) right center no-repeat;
+	height: 40px;
+	border: 1px solid #fff;
+	border: none;
+	margin: 20px;
+	color: #fff;
+	width: 42px;
+	transition: .5s;
 }
-/*nav-bar end*/
-/*slider notice start*/
+header >.center >input:focus {
+	width: 150px;
+	padding: 0 32px 0 10px;
+	height: 42px;
+}
+/*menu  end*/
+/*notice star*/
 .notice{
-	float: left;
+ 	float: left;
 	position: relative;
 	border:1px solid #fff;
-	width: 330px;
-	height:370px;
+	width: 332px;
+	height:400px;
 	background-color: #fff;
 	 box-shadow: -10px -10px 4px #9dab84;
-	 margin-top: 100px;
+	 margin-top: 13px;
 }
-.notice h2{
-	position: absolute;
-	text-transform: uppercase;
-	color: #fff;
-	background-color: #f04a20;
-	font-size: 13.88px;
-	padding: 10px 10px;
-	top: 20px;
-	left: 14px;
-
+.notice h2 {
+    text-transform: uppercase;
+    color: #fff;
+    width: 117px;
+    background-color: #f04a20;
+    font-size: 13.88px;
+    padding: 10px 10px;
+    margin: 20px 0 0 14px;
 }
-.owl-carousel{
-	margin-top: 20px;
+.notice h3 {
+    font-size: 33.88px;
+    text-transform: uppercase;
+    margin: 32px 0 0 14px;
 }
-.notice h3{
-	font-size: 33.88px;
-	text-transform: uppercase;
-	margin: 58px 0 0 14px;
+.notice h5 {
+    font-size: 26.6px;
+    margin: 14px 0 0 14px;
 }
-.notice h5{
-	font-size: 24.6px;
-	margin: 5px 0 0 14px;
+.notice p {
+    font-size: 12px;
+    padding: 3px 14px 0 14px;
+    height: 60px;
+    line-height: 15px;
 }
-.notice p{
-	font-size: 15px;
-	margin: 23px 0 0 14px;
+/*notice end*/
+/*section start*/
+section .fb{
+display: none;
 }
-/*slider notice end*/
+section{
+	height: 0;
+}
+section ins{
+	display: none;
+}
+/*section end*/
 /*dots start*/
 .no-js .owl-carousel, .owl-carousel.owl-loaded{
 	position: relative;
@@ -133,7 +165,7 @@ nav img{
 .owl-theme .owl-nav.disabled+.owl-dots{
 	margin-top: 0 !important;
 	position: absolute;
-	top: 0;
+	top: -30px;
 	right: 0;
 }
 .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
@@ -145,47 +177,77 @@ nav img{
 	text-decoration: none;
 	color: #000;
 	border:2px solid #14161a;
-	padding: 12px 27px;
-	width: 145px;
+	padding: 12px 15px;
+	width: 43.80664652567976%;
 	font-weight: bold;
-	margin: 30px 0 0 14px;
+	margin: 10px 0 0 14px;
+	box-sizing: border-box;
 }
 /*dots end*/
 /*tree start*/
-/*section{
-	position: relative;
-}*/
-section .center{
-	position: relative;
-}
-section >.center >input{
-	float: right;
-	background:url(../images/search.png) right center no-repeat;
-	height: 40px;
-	border: 1px solid #fff;
-	border: none;
-	margin-top: 20px;
-	color: #fff;
-	width: 42px;
-	transition: .5s;
-}
-section >.center >input:focus {
-	width: 150px;
-	padding: 0 32px 0 10px;
-	height: 42px;
-}
 .tree{
 	float: right;
-	position: absolute;
-    width: 490px;
-    top: 67px;
-    right: 84px;
+	position: relative;
+	margin: -29px 0 0 0;
     z-index: 1;
+}
+.tree img{
+	
+	width: 100%;
 }
 .tree .b-img{
 	position: absolute;
-	bottom: 179px;
-    right: 33px;
+	width: 36.7595818815331%;
+    top: 49.828767%;
+    left: 40.59233449477352%;
+}
+.tree .g-img{
+	position: absolute;
+	width: 14.11149825783972%;
+	top: 55.308219%;
+	left: 19.86062717770035%;
+}
+.tree .k-img{
+	position: absolute;
+	width: 21.0801393728223%;
+	top: 36.797909%;
+    left: 16.554795%;
+}
+.tree .p-img{
+	position: absolute;
+	width: 12.801393728223%;
+	top:33.534247%;
+    left: 0.8710801393728223%;
+}
+.tree .a-img{
+	position: absolute;
+	width: 12.19512195121951%;
+	top: 20.905923%;
+    left: 18.81533101045296%;
+}
+.tree .h-img{
+	position: absolute;
+	width: 17.24738675958188%;
+	top: 16.95205479452055%;
+    left: 35.95890410958904%;
+}
+.tree .r-img{
+	position: absolute;
+	width: 24.0418118466899%;
+	top: 16.69863%;
+    right: 15.355401%;
+}
+.tree .m-img{
+	position: absolute;
+	width: 9.930313588850174%;
+	top: 37.109589%;
+    right: 3.13588850174216%;
+}
+.tree .Nyan{
+    position: absolute;
+    top: 36.13013698630137%;
+    right: 19.86062717770035%;
+    width: 39.54703832752613%;
 }
 .tree .b-img:hover,.g-img:hover,.k-img:hover,.p-img:hover,.a-img:hover,.h-img:hover,.r-img:hover,.m-img:hover{
         -moz-transform: scaleX(-1);
@@ -196,58 +258,6 @@ section >.center >input:focus {
         transition: 1s;
         -ms-filter: "FlipH";
 }
-.tree .g-img{
-	position: absolute;
-    bottom: 179px;
-    left: 118px;
-}
-.tree .k-img{
-	position: absolute;
-	bottom: 255px;
-    left: 101px;
-    width: 122px;
-    height: 103px;
-}
-.tree .p-img{
-	position: absolute;
-	top: 182px;
-    left: 0;
-    width: 93px;
-    height: 90px
-}
-.tree .a-img{
-	position: absolute;
-	top: 73px;
-    left: 108px;
-    width: 89px;
-    height: 123px
-}
-.tree .h-img{
-	position: absolute;
-	top: 99px;
-    left: 210px;
-    width: 100px;
-    height: 75px;
-}
-.tree .r-img{
-	position: absolute;
-	top: 80px;
-    right: 21px;
-	width: 137px;
-	height: 109px;
-}
-.tree .m-img{
-	position: absolute;
-	top: 170px;
-    right: -71px;
-    width: 88px;
-    height: 90px;
-}
-.tree .Nyan{
-	position: absolute;
-	bottom: 312px;
-    right: 29px;
-}
 /*tree end*/
 /*main start*/
 main .center{
@@ -255,9 +265,25 @@ main .center{
 }
 main .center .putali{
 	position: absolute;
-	top: -42px;
-    left: -50px;
+    top: -220px;
+    left: -17px;
     height: 220px;
+}
+main a{
+	position: absolute;
+	transform: rotate(-20deg);
+    top: -230px;
+    left: 265px;
+    z-index: 1;
+}
+main a img{
+	width: 68px;
+}
+main .bb-img{
+	position: absolute;
+	top: 66px;
+    right: 0px;
+    width: 300px;
 }
 /*main end*/
 /*footer start*/
@@ -269,8 +295,7 @@ footer p{
 	padding: 0;
 	margin: 0;
 	font-size: 25.39px;
-	height: 100px;
-	line-height: 100px;
+	padding-top: 8px; 
 	color: #fff;
 	font-family: 'Open Sans', sans-serif;
 }
@@ -279,4 +304,25 @@ footer a{
 	color: #fff;
 	font-weight: bold;
 }
+footer ins{
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	color: #fff;
+	font-size: 20px;
+	padding: 10px 0 50px 0;
+}
+footer ins a{
+	font-size: 15px;
+	font-weight: normal;
+	font-size: 20px;
+	text-decoration: none;
+}
 /*footer end*/
+span{
+	display: none;
+}
+.fb-page{
+	float: right;
+	margin: 20px 50px 0 0;
+}
